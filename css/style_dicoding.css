@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 1s ease;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    z-index: 10000;
+}
+
+nav.open {
+    padding: 10px;
+    background-color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+    font-size: 15px;
+
+}
+
+nav ul li h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+nav .logo {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+.hamburger {
+    display: none;
+}
+
+
+
+@media screen and (max-width: 641px) {
+
+    .hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background-color: black;
+        border-radius: 50px;
+    }
+
+    .line::before,
+    .line::after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        width: 30px;
+        height: 3px;
+        border-radius: 50px;
+
+    }
+
+    .line::before {
+        transform: translateY(-6px);
+    }
+
+    .line::after {
+        transform: translateY(6px);
+    }
+
+    nav ul {
+        position: absolute;
+        justify-content: space-evenly;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        opacity: 1;
+        transform: translateX(500px);
+    }
+
+    nav ul.buka {
+        position: absolute;
+        justify-content: space-evenly;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+}
+
+
+/*hero*/
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero .img {
+    display: flex;
+    background: url(../Asset/gunung.jpg);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.hero h1 {
+    z-index: 100;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    width: 100%;
+    padding: 50vh 10vh;
+    font-size: 50px;
+}
+
+@media screen and (max-width: 641px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+}
+
+/*About Japan*/
+main {
+    width: 100%;
+}
+
+#about {
+    margin: 10px;
+    box-shadow: 10px 0px 10px 0px black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+
+#about h1 {
+    text-align: center;
+    padding: 10px 10px 100px;
+    font-size: 30px;
+}
+
+.card-about {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.card-about img {
+    width: 300px;
+}
+
+.card-about p {
+    padding: 10px;
+    font-size: 18px;
+    width: 70%;
+}
+
+/*Galeri*/
+#galeri {
+    margin: 10px;
+    box-shadow: 10px 0px 10px 0px black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#galeri h1 {
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 10px 100px;
+}
+
+.galeri-img {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.galeri-img img {
+    width: 300px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/*profile*/
+#profile {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#profile h1 {
+    font-size: 30px;
+    padding: 10px 10px 100px;
+    text-align: center;
+}
+
+#profile-saya {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.card-profile {
+    padding: 20px;
+    border-radius: 10px;
+
+    margin-right: 20px;
+}
+
+.card-profile img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.map iframe {
+    max-width: 250%;
+    height: 50vh;
+    top: 0;
+    position: relative;
+    border-radius: 10px;
+
+}
+
+footer {
+    width: 100%;
+    background-color: black;
+    padding: 70px;
+}
+
+footer h1 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 641px) {
+    footer h1 {
+        color: white;
+        text-align: center;
+        font-size: 15px;
+    }
+
+}

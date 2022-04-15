@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="css/style_dicoding.css">
+</head>
+
+<body>
+    <!--HEADER FOR NAVIGASI DAN HERO PICTURE-->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Logo</h1>
+            </div>
+            <ul class="navul">
+                <li>
+                    <h3><a href="#about">Tentang Jepang</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#galeri">Galeri</a></h3>
+                </li>
+                <li>
+                    <h3><a href="#profile">Profile</a></h3>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+            </div>
+        </nav>
+        <div class="hero">
+            <div class="img"></div>
+            <h1>WELCOME TO WEBSITE</h1>
+
+        </div>
+    </header>
+    <!--END HEADER-->
+
+    <!--CONTENT MAIN-->
+    <main>
+        <div id="content">
+            <article id="about">
+                <h1>About Japan</h1>
+                <div class="card-about">
+                    <img src="Asset/bendera.jpg" alt="" srcset="">
+                    <p>Jepang dalam Kanji: 日本 <br>
+                        Romaji: Nippon<br>
+                        nama resmi: 日本国<br>
+                        Tentang Nipponkoku adalah sebuah negara kepulauan di Asia Timur. Letaknya di ujung barat Samudra
+                        Pasifik, di sebelah timur Laut Jepang, dan bertetangga dengan Republik Rakyat Tiongkok, Korea
+                        Selatan, dan Rusia. Pulau-pulau paling utara berada di Laut Okhotsk, dan wilayah paling selatan
+                        berupa kelompok pulau-pulau kecil di Laut Tiongkok Timur, tepatnya di sebelah selatan Okinawa
+                        yang bertetangga dengan Taiwan (Republik Tiongkok).
+                        Jepang terdiri dari 6.852 pulau[13] dan menjadikannya sebagai negara kepulauan. Pulau-pulau
+                        utama dari utara ke selatan adalah Hokkaido, Honshu (pulau terbesar), Shikoku, dan Kyushu.</p>
+                </div>
+            </article>
+            <article id="galeri">
+                <h1>Galeri Japan</h1>
+                <div class="galeri-img">
+                    <img src="Asset/gunung.jpg" alt="">
+                    <img src="Asset/gunung1.jpg" alt="">
+                    <img src="Asset/gunung2.jpg" alt="">
+                    <img src="Asset/gunung3.jpg" alt="">
+                    <img src="Asset/gunung4.jpg" alt="">
+                    <img src="Asset/gunung5.jpg" alt="">
+                    <img src="Asset/gunung6.jpg" alt="">
+                    <img src="Asset/kimono.jpg" alt="">
+                </div>
+            </article>
+        </div>
+
+        <aside id="profile">
+            <h1>Profile & Lokasi</h1>
+            <article id="profile-saya">
+                <div class="card-profile">
+                    <img src="Asset/reusmana.jpg" alt="" srcset="">
+                    <table>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>Reusmana Sujani</td>
+                        </tr>
+                        <tr>
+                            <td>Cita-cita</td>
+                            <td>:</td>
+                            <td>FrondEnd Developer</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="map">
+                    <div class="gmap_canvas">
+                        <iframe id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=japan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                    </div>
+                </div>
+            </article>
+        </aside>
+
+    </main>
+    <!--END CONTENT MAIN-->
+
+    <!--FOOTER-->
+    <footer>
+        <h1>&copy; Reusmana Sujani 2022</h1>
+    </footer>
+    <!--END FOOTER-->
+
+    <script>
+        window.addEventListener('scroll', function () {
+
+            let nav = document.querySelector('nav');
+            nav.classList.toggle('open', window.scrollY > 0);
+
+        })
+
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.navul');
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('buka');
+        })
+    </script>
+</body>
+
+</html>
